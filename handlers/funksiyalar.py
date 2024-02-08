@@ -49,22 +49,5 @@ async def send_user_location(chat_id, latitude, longitude):
     await bot.send_location(chat_id, latitude, longitude)
     
     
-import cv2
-import numpy as np
 
-async def has_face(image_path):
-        # Load the image
-        image = cv2.imread(image_path)
-
-        # Convert the image to grayscale
-        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
-        # Load the pre-trained face detection model from OpenCV
-        face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-
-        # Detect faces in the image
-        faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5, minSize=(30, 30))
-
-        # Check if faces were detected
-        return len(faces) > 0
 
