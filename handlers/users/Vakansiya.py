@@ -66,19 +66,62 @@ async def lavozim_oluvchi(message: types.Message, state: FSMContext):
         await Vakansiyalar_state.Lokatsiya_tanlash.set()
     else:
         if message.text == f"Kassir":
-            await message.answer(f"Kassir bolish tartib qoidalari haqida batafsil malumot berishim kerak")
+            await message.answer(f"""Ariza beruvchiga qo'yiladigan asosiy talablar:
+∙ Rus va O\'zbek tillarida erkin muloqot qila olish, Ingliz tilida o\'rta darajada muloqot qila olish;
+∙ Aktiv bo'lish va xushmuomalalik;
+∙ Ishda xayrixohlik va ijobiy munosabat;
+∙ Mas'uliyat va halollik;
+∙ Jamoada ishlash ko'nikmalari;
+∙ Stressga chidamlilik;
+∙ Kassa qurilmalari bilan ishlash ko'nikmalari;
+∙ Kassir lavozimida kamida 3 oylik tajribaga ega bo\'lish.""")
             await message.answer(f"Jinsingizni tanlang:", reply_markup=Jinsni_tanlash_tugmalari)
             await Vakansiyalar_state.Jinsini_olish.set()
         elif message.text == f"Oshxona hodimi":
-            await message.answer(f"Bu yerda oshxona hodimi bolish tartib qoidalari haqida batafsil malumot berishim kerak")
+            await message.answer(f"""Ariza beruvchiga qo'yiladigan asosiy talablar:
+∙ Aktiv bo'lish va xushmuomalalik;
+∙ Ishda xayrixohlik va ijobiy munosabat;
+∙ Mas'uliyat va halollik;
+∙ Yuqori o'rganish tezligi;
+∙ Jamoada ishlash ko'nikmalari;
+∙ Stressga chidamlilik;
+∙ Ish tajribasi shart emas – biz hamma narsani o'zimiz o'rgatamiz!
+
+Asosiy vazifalar:
+∙ Kompaniya texnologiyasi va standartlariga muvofiq ovqat tayyorlash;
+∙ Kompaniya standartlariga muvofiq mehmonlarga xizmat ko'rsatish:
+∙ buyurtmalarni qabul qilish uchun kassada ishlash;
+∙ mehmonlarga buyurtmalar tarqatish;
+∙ Ish joyida, oshxona hududida tozalikni saqlash;
+∙ Kompaniyada qabul qilingan tashqi ko'rinish standartlariga rioya qilish;
+∙ Ish joyida Mehnat muhofazasi va Xavfsizlik texnika qoidalariga rioya qilish;""")
             await message.answer(f"Jinsingizni tanlang:", reply_markup=Jinsni_tanlash_tugmalari)
             await Vakansiyalar_state.Jinsini_olish.set()    
         elif message.text == f"Raner":
-            await message.answer(f"Bu yerda Raner bolish tartib qoidalari haqida batafsil malumot berishim kerak")
+            await message.answer(f"""Ariza beruvchiga qo'yiladigan asosiy talablar:
+∙ Aktiv bo'lish va xushmuomalalik;
+∙ Ishda xayrixohlik va ijobiy munosabat;
+∙ Mas'uliyat va halollik;
+∙ Stressga chidamlilik;
+
+Asosiy vazifalar:
+∙ Kompaniya standartlariga muvofiq mehmonlarga xizmat ko'rsatish:
+∙ mehmonlarga xizmat ko'rsatish zalida ishlash;
+∙ Ish joyida, restoran hududida tozalikni saqlash;
+∙ Kompaniyada qabul qilingan tashqi ko'rinish standartlariga rioya qilish;
+∙ Ish joyida Mehnat muhofazasi va Xavfsizlik texnika qoidalariga rioya qilish;""")
             await message.answer(f"Jinsingizni tanlang:", reply_markup=Jinsni_tanlash_tugmalari)
             await Vakansiyalar_state.Jinsini_olish.set()
         elif message.text == f"Texnik hodim":
-            await message.answer(f"Bu yerda texnik hodim bolish tartib qoidalari haqida batafsil malumot berishim kerak")
+            await message.answer(f"""Ariza beruvchiga qo'yiladigan asosiy talablar:
+∙ Ishda xayrixohlik va ijobiy munosabat;
+∙ Mas'uliyat va halollik;
+∙ Stressga chidamlilik;
+
+Asosiy vazifalar:
+∙ Ish joyida, restoran hududida tozalikni saqlash;
+∙ Idishlar tozaligini saqlash va tezlik bilan ishlatishga tayyorlash;
+∙ Ish joyida Mehnat muhofazasi va Xavfsizlik texnika qoidalariga rioya qilish;""")
             await message.answer(f"Jinsingizni tanlang:", reply_markup=Jinsni_tanlash_tugmalari)
             await Vakansiyalar_state.Jinsini_olish.set()
         await state.update_data({"Lavozim":message.text})
@@ -362,7 +405,7 @@ async def process_callback_button(callback_query: types.CallbackQuery, state: FS
     print("callback ishladi")
     til = data.get("til")
     await bot.answer_callback_query(callback_query.id, text=f"Xabar yuborildi")
-    await bot.send_message(callback_query.data, f"Air Waffle jamoasi a\'zosiga aylanish istagini bildirganingiz uchun tashakkur.\nKechirasiz, hozirda ushbu vakansiyada bo\'sh joylar mavjud emas. Joylar ochilishi bilan sizga xabar beramiz! \n Благодарим вас за интерес к тому, чтобы стать членом команды Air Waffle. К сожалению, на данный момент вакансий по данной вакансии нет. Мы сообщим вам, как только откроется место!")
+    await bot.send_message(callback_query.data, f"\tAir Waffle jamoasi a\'zosiga aylanish istagini bildirganingiz uchun tashakkur.\nKechirasiz, hozirda ushbu vakansiyada bo\'sh joylar mavjud emas. Joylar ochilishi bilan sizga xabar beramiz! \n \tБлагодарим вас за интерес к тому, чтобы стать членом команды Air Waffle. К сожалению, на данный момент вакансий по данной вакансии нет. Мы сообщим вам, как только откроется место!")
     await bot.edit_message_reply_markup(chat_id=callback_query.message.chat.id,
                                         message_id=callback_query.message.message_id,
                                         reply_markup=None)

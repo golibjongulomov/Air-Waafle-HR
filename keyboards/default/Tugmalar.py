@@ -21,9 +21,6 @@ Til_tanlash_tugmalari = ReplyKeyboardMarkup(
         [
             KeyboardButton(text=f"🇷🇺Русский"),
         ],
-        [
-            KeyboardButton(text=f"↩️Ortga"),
-        ],
     ],
         
     resize_keyboard=True
@@ -58,6 +55,9 @@ Lavozim_tanlash_tugmalari_m1_s1 = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text=f"Oshxona hodimi"),
+        ],
+        [
+            KeyboardButton(text=f"Barista")
         ],
         [
             KeyboardButton(text=f"Raner"),
@@ -288,9 +288,6 @@ Til_tanlash_tugmalari_ru = ReplyKeyboardMarkup(
         [
             KeyboardButton(text=f"🇺🇿O\'zbekcha"),
         ],
-        [
-            KeyboardButton(text=f"↩️Назад"),
-        ],
     ],
         
     resize_keyboard=True
@@ -325,6 +322,9 @@ Lavozim_tanlash_tugmalari_m1_s1_ru = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text=f"Рабочий кухни"),
+        ],
+        [
+            KeyboardButton(text=f"Бариста")
         ],
         [
             KeyboardButton(text=f"Ранер"),

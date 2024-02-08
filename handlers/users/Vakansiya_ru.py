@@ -62,19 +62,62 @@ async def lavozim_oluvchi(message: types.Message, state: FSMContext):
         await Vakansiyalar_state_ru.Lokatsiya_tanlash_ru.set()
     else:
         if message.text == f"Кассир":
-            await message.answer(f"Kassir bolish tartib qoidalari haqida batafsil malumot berishim kerak")
+            await message.answer(f"""Основные требования к соискателю:
+∙ умею свободно общаться на русском и узбекском языках, умею общаться на английском языке на среднем уровне;
+∙ Быть активным и вежливым;
+∙ Доброжелательность и позитивный настрой в работе;
+∙ Ответственность и честность;
+∙ Навыки работы в команде;
+∙ Стрессоустойчивость;
+∙ Навыки работы с контрольно-кассовой техникой;
+∙ Опыт работы кассиром не менее 3-х месяцев.""")
             await message.answer(f"Выберите пол:", reply_markup=Jinsni_tanlash_tugmalari_ru)
             await Vakansiyalar_state_ru.Jinsini_olish_ru.set()
         elif message.text == f"Рабочий кухни":
-            await message.answer(f"Bu yerda oshxona hodimi bolish tartib qoidalari haqida batafsil malumot berishim kerak")
+            await message.answer(f"""Основные требования к соискателю:
+∙ Быть активным и вежливым;
+∙ Доброжелательность и позитивный настрой в работе;
+∙ Ответственность и честность;
+∙ Высокая скорость обучения;
+∙ Навыки работы в команде;
+∙ Стрессоустойчивость;
+∙ Опыт работы не требуется – всему обучаем сами!
+
+Основные обязанности:
+∙ Приготовление еды в соответствии с технологиями и стандартами компании;
+∙ Обслуживание гостей по стандартам компании:
+∙ работа на кассе для приема заказов;
+∙ раздача заказов гостям;
+∙ Поддержание чистоты на рабочем месте, в кухонной зоне;
+∙ Соблюдение стандартов внешнего вида, принятых в компании;
+∙ Соблюдение технических правил охраны труда и техники безопасности на рабочем месте;""")
             await message.answer(f"Выберите пол:", reply_markup=Jinsni_tanlash_tugmalari_ru)
             await Vakansiyalar_state_ru.Jinsini_olish_ru.set()    
         elif message.text == f"Ранер":
-            await message.answer(f"Bu yerda Raner bolish tartib qoidalari haqida batafsil malumot berishim kerak")
+            await message.answer(f"""Основные требования к соискателю:
+∙ Быть активным и вежливым;
+∙ Доброжелательность и позитивный настрой в работе;
+∙ Ответственность и честность;
+∙ Стрессоустойчивость;
+                                 
+Основные обязанности:
+∙ Обслуживание гостей по стандартам компании:
+∙ работа в зале обслуживания гостей;
+∙ Поддержание чистоты на рабочем месте, в зоне ресторана;
+∙ Соблюдение стандартов внешнего вида, принятых в компании;
+∙ Соблюдение технических правил охраны труда и техники безопасности на рабочем месте;""")
             await message.answer(f"Выберите пол:", reply_markup=Jinsni_tanlash_tugmalari_ru)
             await Vakansiyalar_state_ru.Jinsini_olish_ru.set()
         elif message.text == f"Техничка":
-            await message.answer(f"Bu yerda texnik hodim bolish tartib qoidalari haqida batafsil malumot berishim kerak")
+            await message.answer(f"""Основные требования к соискателю:
+∙ Доброжелательность и позитивный настрой в работе;
+∙ Ответственность и честность;
+∙ Стрессоустойчивость;
+
+Основные обязанности:
+∙ Поддержание чистоты на рабочем месте, в зоне ресторана;
+∙ Поддержание посуды в чистоте и подготовка ее к быстрому использованию;
+∙ Соблюдение технических правил охраны труда и техники безопасности на рабочем месте;""")
             await message.answer(f"Выберите пол:", reply_markup=Jinsni_tanlash_tugmalari_ru)
             await Vakansiyalar_state_ru.Jinsini_olish_ru.set()
         await state.update_data({"Lavozim":message.text})
