@@ -339,6 +339,7 @@ async def adres_oluvchi(message: types.Message, state: FSMContext):
 async def rasm_oluvchi(message: types.Message, state: FSMContext):
     photo_file_id = message.photo[-1].file_id
     await state.update_data({"photo_id":photo_file_id})
+    print(photo_file_id)
     user_id = message.from_user.id
     data = await state.get_data()
     filial = data.get("Filial")
