@@ -57,9 +57,6 @@ Lavozim_tanlash_tugmalari_m1_s1 = ReplyKeyboardMarkup(
             KeyboardButton(text=f"Oshxona hodimi"),
         ],
         [
-            KeyboardButton(text=f"Barista")
-        ],
-        [
             KeyboardButton(text=f"Raner"),
         ],
         [
@@ -322,9 +319,6 @@ Lavozim_tanlash_tugmalari_m1_s1_ru = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text=f"Рабочий кухни"),
-        ],
-        [
-            KeyboardButton(text=f"Бариста")
         ],
         [
             KeyboardButton(text=f"Ранер"),
