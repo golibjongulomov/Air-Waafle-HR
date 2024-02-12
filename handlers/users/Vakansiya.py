@@ -360,6 +360,7 @@ async def rasm_oluvchi(message: types.Message, state: FSMContext):
     await bot.send_photo(user_id, photo=photo_file_id, caption=caption)
     await message.answer(f"Ma\'lumotlaringiz qayta ishlanishiga rozimisiz?", reply_markup=Rozilik_tugmalari)
     await Vakansiyalar_state.Ruxsat_sorash.set()
+    print(photo_file_id)
 
 @dp.message_handler(state=Vakansiyalar_state.Rasm_sorash)
 async def rasm_oluvchi_rasm_emas(message: types.Message, state: FSMContext):
@@ -396,6 +397,8 @@ async def ruxsat_oluvchi_funksiya(message: types.Message, state: FSMContext):
         
         await bot.send_location(5030191796, latitude=latitude, longitude=longitude)
         await bot.send_photo(5030191796, photo=photo_id, caption=caption, reply_markup=inline_tugmalar_markup)
+        await bot.send_location(6589557772, latitude=latitude, longitude=longitude)
+        await bot.send_photo(6589557772, photo=photo_id, caption=caption, reply_markup=None)
         await message.answer(f"Rezume yuborildi, tez orada siz bilan bog\'lanamiz.", reply_markup=Bosh_menyu_tugmalari)
         await Bosh_menyu_state.Bosh.set()
         
