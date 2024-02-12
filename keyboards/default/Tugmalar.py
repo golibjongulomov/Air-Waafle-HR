@@ -302,10 +302,10 @@ Lokatsiya_bolimi_tugmalari_ru = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text=f"📍Центральный парк"),
-            KeyboardButton(text=f"↩️Назад"),
         ],
         [
-            KeyboardButton(text=f"❌Отмена")
+            KeyboardButton(text=f"❌Отмена"),
+            KeyboardButton(text=f"↩️Назад"),
         ],
     ],
         
