@@ -338,6 +338,7 @@ async def adres_oluvchi(message: types.Message, state: FSMContext):
 @dp.message_handler(content_types=types.ContentType.PHOTO, state=Vakansiyalar_state.Rasm_sorash)
 async def rasm_oluvchi(message: types.Message, state: FSMContext):
     photo_file_id = message.photo[-1].file_id
+    print(photo_file_id)
     await state.update_data({"photo_id":photo_file_id})
     user_id = message.from_user.id
     data = await state.get_data()
@@ -355,7 +356,7 @@ async def rasm_oluvchi(message: types.Message, state: FSMContext):
     rus_tili = data.get("Rus_tili_darajasi")
     ozbek_tili = data.get("Ozbek_tili_darajasi")
     maosh = data.get("Maosh")
-    caption = f"""Filial: {filial}\nLavozim: {lavozim}\nJinsi: {jins}\nFIO: {ism}\nTug\'ilgan sana: {tugilgan_sana}\nTelefon: {telefon}\nTalabami: {talaba}\nTalim shakli: {talim_shakli}\nMa\'lumoti: {malumoti}\nRus tili: {rus_tili}\nO'zbek tili: {ozbek_tili}\nMaosh: {maosh}\n\n{photo_file_id}"""
+    caption = f"""Filial: {filial}\nLavozim: {lavozim}\nJinsi: {jins}\nFIO: {ism}\nTug\'ilgan sana: {tugilgan_sana}\nTelefon: {telefon}\nTalabami: {talaba}\nTalim shakli: {talim_shakli}\nMa\'lumoti: {malumoti}\nRus tili: {rus_tili}\nO'zbek tili: {ozbek_tili}\nMaosh: {maosh}"""
     await bot.send_photo(user_id, photo=photo_file_id, caption=caption)
     await message.answer(f"Ma\'lumotlaringiz qayta ishlanishiga rozimisiz?", reply_markup=Rozilik_tugmalari)
     await Vakansiyalar_state.Ruxsat_sorash.set()
