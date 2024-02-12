@@ -8,7 +8,7 @@ from aiogram.dispatcher import FSMContext
 
 @dp.message_handler(text="Biz haqimizda", state=Bosh_menyu_state.Bosh)
 async def familya(message: types.Message):
-    await message.answer(f"Air waffle haqida malumot:\n\n\n\n\n\n\n\nAir waffle haqida malumot:")
+    await bot.send_photo(message.from_user.id, photo=AgACAgIAAxkBAAIW42XJojOEu45tJxSqpsjom8rCbY9hAAKx0DEbM09QSlCIN9sTthqNAQADAgADeQADNAQ, caption=f"Air Waffle – Gong Kong vaflilari")
     await Bosh_menyu_state.Bosh.set()
 
 @dp.message_handler(text="🖋Vakansiyalar", state=Bosh_menyu_state.Bosh)
@@ -31,7 +31,7 @@ async def tilni_ozgartir(message: types.Message, state: FSMContext):
 
 @dp.message_handler(text="О нас", state=Bosh_menyu_state_ru.Bosh_ru)
 async def familya(message: types.Message):
-    await message.answer(f"О Air waffle\n\n\n\n\n\n\n\nО Air waffle:")
+    await bot.send_photo(message.from_user.id, photo=AgACAgIAAxkBAAIW42XJojOEu45tJxSqpsjom8rCbY9hAAKx0DEbM09QSlCIN9sTthqNAQADAgADeQADNAQ, caption=f"Air Waffle – Гонконгские вафли")
     await Bosh_menyu_state_ru.Bosh_ru.set()
 
 @dp.message_handler(text="🖋Вакансии", state=Bosh_menyu_state_ru.Bosh_ru)
