@@ -359,8 +359,8 @@ async def rasm_oluvchi(message: types.Message, state: FSMContext):
     caption = f"""Filial: {filial}\nLavozim: {lavozim}\nJinsi: {jins}\nFIO: {ism}\nTug\'ilgan sana: {tugilgan_sana}\nTelefon: {telefon}\nTalabami: {talaba}\nTalim shakli: {talim_shakli}\nMa\'lumoti: {malumoti}\nRus tili: {rus_tili}\nO'zbek tili: {ozbek_tili}\nMaosh: {maosh}"""
     await bot.send_photo(user_id, photo=photo_file_id, caption=caption)
     await message.answer(f"Ma\'lumotlaringiz qayta ishlanishiga rozimisiz?", reply_markup=Rozilik_tugmalari)
+    await message.answer(f"{photo_file_id}")
     await Vakansiyalar_state.Ruxsat_sorash.set()
-    print(photo_file_id)
 
 @dp.message_handler(state=Vakansiyalar_state.Rasm_sorash)
 async def rasm_oluvchi_rasm_emas(message: types.Message, state: FSMContext):
