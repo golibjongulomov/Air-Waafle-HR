@@ -1,7 +1,7 @@
 from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart
 from aiogram.types import Message
-from loader import dp
+from loader import dp, bot
 from keyboards.default.Tugmalar import *
 from states.Statelar import *
 from aiogram.dispatcher import FSMContext
