@@ -52,9 +52,9 @@ async def lokatsiya_oluvchi(message: types.Message, state: FSMContext):
             await message.answer(f"Qaysi lavozimda ishlamoqchisiz?", reply_markup=Lavozim_tanlash_tugmalari)
             await Vakansiyalar_state.Ish_orni_olish.set()
         elif message.text == f"📍Central Park":
-            # latitude = 41.303148198871305  
-            # longitude = 69.2454436138731 
-            # await send_user_location(user_id, latitude, longitude)
+            latitude = 41.31270419098545
+            longitude = 69.29877042978262
+            await send_user_location(user_id, latitude, longitude)
             await message.answer(f"Qaysi lavozimda ishlamoqchisiz?", reply_markup=Lavozim_tanlash_tugmalari)
             await Vakansiyalar_state.Ish_orni_olish.set()
         await state.update_data({"Filial":message.text})
