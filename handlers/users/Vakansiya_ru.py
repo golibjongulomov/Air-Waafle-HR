@@ -96,7 +96,7 @@ async def lavozim_oluvchi(message: types.Message, state: FSMContext):
 ∙ Соблюдение технических правил охраны труда и техники безопасности на рабочем месте;""")
             await message.answer(f"Выберите пол:", reply_markup=Jinsni_tanlash_tugmalari_ru)
             await Vakansiyalar_state_ru.Jinsini_olish_ru.set()  
-            elif message.text == f"Бариста":
+        elif message.text == f"Бариста":
             await message.answer(f"""Основные требования к соискателю:
 ∙ Быть активным и вежливым;
 ∙ Доброжелательность и позитивный настрой в работе;
