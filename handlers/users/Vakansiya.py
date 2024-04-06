@@ -97,7 +97,7 @@ Asosiy vazifalar:
 ∙ Ish joyida Mehnat muhofazasi va Xavfsizlik texnika qoidalariga rioya qilish;""")
             await message.answer(f"Jinsingizni tanlang:", reply_markup=Jinsni_tanlash_tugmalari)
             await Vakansiyalar_state.Jinsini_olish.set()    
-            elif message.text == f"Barista":
+        elif message.text == f"Barista":
             await message.answer(f"""Ariza beruvchiga qo'yiladigan asosiy talablar:
 ∙ Aktiv bo'lish va xushmuomalalik;
 ∙ Ishda xayrixohlik va ijobiy munosabat;
