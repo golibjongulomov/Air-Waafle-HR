@@ -97,6 +97,25 @@ Asosiy vazifalar:
 ∙ Ish joyida Mehnat muhofazasi va Xavfsizlik texnika qoidalariga rioya qilish;""")
             await message.answer(f"Jinsingizni tanlang:", reply_markup=Jinsni_tanlash_tugmalari)
             await Vakansiyalar_state.Jinsini_olish.set()    
+            elif message.text == f"Barista":
+            await message.answer(f"""Ariza beruvchiga qo'yiladigan asosiy talablar:
+∙ Aktiv bo'lish va xushmuomalalik;
+∙ Ishda xayrixohlik va ijobiy munosabat;
+∙ Mas'uliyat va halollik;
+∙ Yuqori o'rganish tezligi;
+∙ Jamoada ishlash ko'nikmalari;
+∙ Stressga chidamlilik;
+∙ Latte Art
+
+Asosiy vazifalar:
+∙ Kompaniya texnologiyasi va standartlariga muvofiq ichimliklar tayyorlash;
+∙ Kompaniya standartlariga muvofiq mehmonlarga xizmat ko'rsatish:
+∙ mehmonlarga buyurtmalar tarqatish;
+∙ Ish joyida, oshxona hududida tozalikni saqlash;
+∙ Kompaniyada qabul qilingan tashqi ko'rinish standartlariga rioya qilish;
+∙ Ish joyida Mehnat muhofazasi va Xavfsizlik texnika qoidalariga rioya qilish;""")
+            await message.answer(f"Jinsingizni tanlang:", reply_markup=Jinsni_tanlash_tugmalari)
+            await Vakansiyalar_state.Jinsini_olish.set()
         elif message.text == f"Raner":
             await message.answer(f"""Ariza beruvchiga qo'yiladigan asosiy talablar:
 ∙ Aktiv bo'lish va xushmuomalalik;
