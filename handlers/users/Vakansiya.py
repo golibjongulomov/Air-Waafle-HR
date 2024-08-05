@@ -414,10 +414,6 @@ async def ruxsat_oluvchi_funksiya(message: types.Message, state: FSMContext):
         
         await bot.send_location(6589557772, latitude=latitude, longitude=longitude)
         await bot.send_photo(6589557772, photo=photo_id, caption=caption, reply_markup=inline_tugmalar_markup)
-        await bot.send_location(1291322825, latitude=latitude, longitude=longitude)
-        await bot.send_photo(1291322825, photo=photo_id, caption=caption, reply_markup=None)
-        await bot.send_location(79240440, latitude=latitude, longitude=longitude)
-        await bot.send_photo(79240440, photo=photo_id, caption=caption, reply_markup=None)
         await message.answer(f"Rezume yuborildi, tez orada siz bilan bog\'lanamiz.", reply_markup=Bosh_menyu_tugmalari)
         await Bosh_menyu_state.Bosh.set()
         
