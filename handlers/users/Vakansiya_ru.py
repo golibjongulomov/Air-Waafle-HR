@@ -414,7 +414,7 @@ async def ruxsat_oluvchi_funksiya(message: types.Message, state: FSMContext):
         
         await bot.send_location(6589557772, latitude=latitude, longitude=longitude)
         await bot.send_photo(6589557772, photo=photo_id, caption=caption, reply_markup=inline_tugmalar_markup)
-        await message.answer(f"Резюме отправлено, мы свяжемся с вами в ближайшее время.", reply_markup=Bosh_menyu_tugmalari_ru)
+        await message.answer(f"Резюме отправлено, мы свяжемся с вами в ближайшее время!", reply_markup=Bosh_menyu_tugmalari_ru)
         await Bosh_menyu_state_ru.Bosh_ru.set()
         
 
