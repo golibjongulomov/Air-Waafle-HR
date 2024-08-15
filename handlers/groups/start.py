@@ -11,6 +11,6 @@ async def bot_start(message: types.Message, state: FSMContext):
     await message.answer(f"Здрасвствуйте, {message.from_user.full_name}!", reply_markup=Bosh_menyu_tugmalari_ru)
     await state.update_data({"til":"ru"})
     await Bosh_menyu_state_ru.Bosh_ru.set()
-    print(f"{message.from_user.id}")
+    print(f"{message.chat.id}")
  
     
