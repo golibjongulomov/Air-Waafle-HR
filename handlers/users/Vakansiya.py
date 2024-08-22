@@ -412,8 +412,8 @@ async def ruxsat_oluvchi_funksiya(message: types.Message, state: FSMContext):
         button = InlineKeyboardButton(text=f"Vakansiya yo\'q", callback_data=message.from_user.id)
         inline_tugmalar_markup.add(button)
         
-        await bot.send_location(-4241220733, latitude=latitude, longitude=longitude)
-        await bot.send_photo(-4241220733, photo=photo_id, caption=caption, reply_markup=inline_tugmalar_markup)
+        await bot.send_location(-1002189488233, latitude=latitude, longitude=longitude)
+        await bot.send_photo(-1002189488233, photo=photo_id, caption=caption, reply_markup=inline_tugmalar_markup)
         await message.answer(f"Rezume yuborildi, tez orada siz bilan bog\'lanamiz!", reply_markup=Bosh_menyu_tugmalari)
         await Bosh_menyu_state.Bosh.set()
         
