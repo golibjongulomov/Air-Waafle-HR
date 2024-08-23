@@ -17,7 +17,3 @@ async def bot_start(message: types.Message, state: FSMContext):
 
     
 
-# @dp.message_handler(content_types=types.ContentType.PHOTO, state="*")
-# async def rasm_oluvchi(message: types.Message, state: FSMContext):
-#     photo_file_id = message.photo[-1].file_id
-#     print (photo_file_id)
