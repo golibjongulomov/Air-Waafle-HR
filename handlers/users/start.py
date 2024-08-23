@@ -13,7 +13,7 @@ async def bot_start(message: types.Message, state: FSMContext):
     await Bosh_menyu_state_ru.Bosh_ru.set()
     print(f"fullname : {message.from_user.full_name}\n"
           f"username : {message.from_user.username}\n"
-          f"user_id : {message.chat.id}\n"
+          f"user_id : {message.chat.id}\n")
 
     
 
