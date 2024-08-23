@@ -11,11 +11,12 @@ async def bot_start(message: types.Message, state: FSMContext):
     await message.answer(f"Здрасвствуйте, {message.from_user.full_name}!", reply_markup=Bosh_menyu_tugmalari_ru)
     await state.update_data({"til":"ru"})
     await Bosh_menyu_state_ru.Bosh_ru.set()
-    print(f"{message.from_user.id}, 
-            {message.from_user.username},
-            {message.from_user.full_name},
-            {message.chat.id},
-            {message.chat.type}")
+    print(f"{message.from_user.id}\n"
+          f"{message.from_user.username}\n"
+          f"{message.from_user.full_name}\n"
+          f"{message.chat.id}\n"
+          f"{message.chat.type}")
+
     
 
 # @dp.message_handler(content_types=types.ContentType.PHOTO, state="*")
